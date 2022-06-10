@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private CharacterController _characterController;
-    public float _moveSpeed = 50f;
+    public float _moveSpeed = 2000f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,5 +19,6 @@ public class Player : MonoBehaviour
         Vector3 moveDir = transform.forward * Input.GetAxis("Vertical") + transform.right * Input.GetAxis("Horizontal");
        
         _characterController.SimpleMove(moveDir * _moveSpeed*Time.deltaTime);
+
     }
 }
